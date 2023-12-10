@@ -1,10 +1,18 @@
 import './App.css'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HomePage} from "./pages/home/HomePage.tsx";
+import {ErrorPage} from "./pages/error/ErrorPage.tsx";
 
 function App() {
     return (
     <>
-        <h1>Hillel Trip Planner app</h1>
-        <p>Being developed...</p>
+        <BrowserRouter>
+            <Routes>
+                <Route path={'/'} element={<HomePage/>}/>
+                <Route path={'/home'} element={<HomePage/>}/>
+                <Route path={'*'} element={<ErrorPage/>}/>
+            </Routes>
+        </BrowserRouter>
     </>
   )
 }
