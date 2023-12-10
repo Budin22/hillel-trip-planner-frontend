@@ -1,9 +1,21 @@
+import {GenericPage} from "../GenericPage.tsx";
+import {Box, Link, Typography} from "@mui/joy";
+
 export const ErrorPage = () => {
     return (
-        <>
-            <h1>Error Page</h1>
-            <p>Something went wrong</p>
-            <a href={'/home'}>Return to home page</a>
-        </>
+        <GenericPage>
+            <Box sx={{
+                my: 'auto',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center'
+            }}>
+                <div>
+                    <Typography level={'h1'}>Error Page</Typography>
+                    <Typography level={'body-sm'}>Something went wrong</Typography>
+                    <Link href={'/home'}>Return to home page</Link>
+                </div>
+            </Box>
+        </GenericPage>
     );
 };
