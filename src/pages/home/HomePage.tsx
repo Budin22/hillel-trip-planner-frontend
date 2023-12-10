@@ -1,11 +1,21 @@
+import {GenericPage} from "../GenericPage.tsx";
+import {Box, Typography} from "@mui/joy";
+
 export const HomePage = () => {
     return (
-        <>
-            <div>
-                <h1>Hillel Trip Planner app</h1>
-                <h2>Home Page</h2>
-                <p>Being developed...</p>
-            </div>
-        </>
+        <GenericPage>
+            <Box sx={{
+                my: 'auto',
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'center'
+            }}>
+                <div>
+                    <Typography level={'h1'}>Hillel Trip Planner app</Typography>
+                    <Typography level={'h2'}>Home Page</Typography>
+                    <Typography level={'body-sm'}>Being developed...</Typography>
+                </div>
+            </Box>
+        </GenericPage>
     );
 };
