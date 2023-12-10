@@ -1,0 +1,35 @@
+@use 'colors';
+
+* {
+  background-color: colors.$background-color;
+}
+
+h1 {
+  color: colors.$headline-color;
+}
+
+h2, h3, h4, h5, h6 {
+  color: colors.$il-secondary-color;
+}
+
+p {
+  color: colors.$paragraph-color;
+}
+
+button, input[type=button], input[type=submit] {
+  background-color: colors.$button-color;
+  color: colors.$button-text-color;
+}
+
+a, a:link, a:visited {
+  color: colors.$link-color;
+}
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
